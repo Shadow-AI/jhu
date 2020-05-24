@@ -4,74 +4,85 @@
 }
 
 body{
-    background-color: floralwhite;
+    background: #121212;
 }
 
-.container{
-    display: inline-block;
-    margin: 10px;
-}
-
-.fr{
-    float: right;
-    border: 1px black solid;
-    background: lightcoral;
-    padding: 5px 10px 5px 10px;
-}
-
-h1{
-    background-color: darkred;
-    color: aquamarine;
-    padding: 10px;
+header{
+    margin: 5% 15% 5% 15%;
     display: flex;
-    align-self: center;
-    align-items: center;
     justify-content: center;
+    align-content: center;
+    color: #1b9aaa;
 }
 
-.col{
-    border: 1px solid black;
-    box-sizing: border-box;
-    background-color: aqua;
-/*    height: 150px;*/
-    margin-top: 10px;
-    margin-bottom: 10px;
+.d-flex{
+    display: flex;
+    flex-wrap: nowrap;
+    margin: 15px 18% 15px 18%;
+    justify-content: space-between;
+}
+
+.half, .full{
+    border: 2px solid #35605A;
+    width: 30%;
+    min-height: 200px;
+    
+}
+.mt{
+    margin-top: 0;    
+}
+
+div > p{
+    color: #DDDBCB;
+}
+
+.float-right{
+    float: right;
+    background-color: #AC80A0;
     padding: 10px;
     
 }
 
-.col > div{
-    text-overflow: clip;
-    margin-top: 10px;
+.mtt{
+    margin-top: 40px;
+    padding: 10px;
+    height: 100%;
 }
 
 @media screen and (min-width: 992px){
-    .col{
-        width: 33%;
-        box-sizing: border-box;
-        display: inline-block;
-        
-    }
+    
 }
 
 @media screen and (min-width: 768px) and (max-width: 991px){
-    .container{
-        white-space: nowrap;
+    .d-flex{
+        flex-wrap: wrap;
+        
     }
-    
-    .col.full{
-        width: 100%;
-    }
-    .col.half{
-        display: inline-block;
-        float: left;
+    .half{
         white-space: normal;
-        width: 49%;
+        width: 46%;
+        margin: 15px 7px 15px 7px;
+    }
+    .full{
+        white-space: normal;
+        width: 100%;
+        margin: 15px 7px 15px 7px;
     }
 }
 
 @media screen and (max-width: 767px){
-    .col{
+    .d-flex{
+        flex-wrap: wrap;
+        
+    }
+    .half{
+        white-space: normal;
         width: 100%;
+        margin: 15px 7px 15px 7px;
+    }
+    .full{
+        white-space: normal;
+        width: 100%;
+        margin: 15px 7px 15px 7px;
     }
 }
